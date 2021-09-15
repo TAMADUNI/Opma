@@ -10,7 +10,7 @@ These are project that can make sicpa good place to work
         - level 3 admin
         - level 4 admin 
        
-     2. Start shift and End shift button to track time duration
+     2. Start shift and End shift button to track time duration(time counter)
      3. Edit start time and End time i.e enter time manually like clockify
      4. Activities during shift i.e ink, solvent, opm, corrective maintanance, cleaning etc.
      5. Issues and incidents
@@ -22,6 +22,7 @@ These are project that can make sicpa good place to work
      11. Action required on next shift 
      12. Handover notes 
      13. Handover by, take over by Name and signature
+     14. Download handover report in pdf format like one given with Marwa
 2. Shift planner
 3. Leave planner 
 4. Leave request
