@@ -3,7 +3,7 @@ These are project that can make sicpa good place to work
      1. Signup and sign in
         - email and password authentication
         - change password
-        - reset password
+        - forgot password? reset password
         - remember me password
         - Level 1 admin
         - level 2 admin
@@ -30,3 +30,4 @@ These are project that can make sicpa good place to work
 3. Leave planner 
 4. Leave request
 5. Work order task ink, solvent, opm, site activities
+6. Service desk app
