@@ -23,6 +23,9 @@ These are project that can make sicpa good place to work
      12. Handover notes 
      13. Handover by, take over by Name and signature
      14. Download handover report in pdf format like one given with Marwa
+     13. Team leader accept he will not close untill mention the required spare
+     14. Manager accept he will not close until mention the requested spare
+     15. Hr accept 
 2. Shift planner
 3. Leave planner 
 4. Leave request
