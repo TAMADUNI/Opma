@@ -30,7 +30,7 @@ These are project that can make sicpa good place to work
      17. Pending issues the acceptor must read the pending issue and close the 
           shift until he has resolved the pending issues
      18. Record plc variables, no of valids and invalids, total 0%
-     
+     19. Add images and send notification to TL
 2. Shift planner
 3. Leave planner 
 4. Leave request
