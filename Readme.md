@@ -26,6 +26,8 @@ These are project that can make sicpa good place to work
      13. Team leader accept he will not close untill mention the required spare
      14. Manager accept he will not close until mention the requested spare
      15. Hr accept 
+     16. Updates column i.e production start or stopped, any incident with no 
+     17. Pending issues the acceptor must read the pending issue and close the shift until he has resolved the pending issues
 2. Shift planner
 3. Leave planner 
 4. Leave request
