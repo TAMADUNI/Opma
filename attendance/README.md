@@ -1,6 +1,6 @@
 1. Attendance register with shift handover
      1. Signup and sign in
-        - email and password authentication
+        - email and password authentication(gem - devise)
         - change password
         - forgot password? reset password
         - remember me password
