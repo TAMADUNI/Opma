@@ -10,6 +10,7 @@ describe 'User signup', type: :request do
 
   scenario 'With valid data' do
     fill_in 'user_email', with: email
+    fill_in 'mobile_number', with: mobile_number
     fill_in 'password', with: password
     click_button 'Register'
     expect(page).to have_content('You have registered successfully.')
