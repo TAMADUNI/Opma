@@ -15,19 +15,20 @@
           - it shows the number of work orders per day and rewards
      6. Issues and incidents
      7. Spare part used
-     8. Consumables used used
-     9. Inventory i.e available materials
-     10. Tools handover
-     11. Missing tools
-     12. Action required on next shift 
-     13. Handover notes 
-     14. Handover by, take over by Name and signature
-     15. Download handover report in pdf format like one given with Marwa
-     16. Team leader accept he will not close untill mention the required spare
-     17. Manager accept he will not close until mention the requested spare
-     18. Hr accept 
-     19. Updates column i.e production start or stopped, any incident with no 
-     20. Pending issues the acceptor must read the pending issue and close the 
+     8. Spare reception and write the date received in the bottles and date used in the bottles(ink & solvent)
+     9. Consumables used used
+     10. Inventory i.e available materials
+     11. Tools handover
+     12. Missing tools
+     13. Action required on next shift 
+     14. Handover notes 
+     15. Handover by, take over by Name and signature
+     16. Download handover report in pdf format like one given with Marwa
+     17. Team leader accept he will not close untill mention the required spare
+     18. Manager accept he will not close until mention the requested spare
+     19. Hr accept 
+     20. Updates column i.e production start or stopped, any incident with no 
+     21. Pending issues the acceptor must read the pending issue and close the 
           shift until he has resolved the pending issues
      18. Record plc variables, no of valids and invalids, total 0%
      19. Add images and send notification to TL
