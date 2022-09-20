@@ -17,6 +17,9 @@
              Overall score is the % of all fsts 
      5. Issues and incidents
      6. Spare part used
+           -  Each activity is wo number is logged to the app and it has a point
+               i.e 5, 4, 3, 2, 1, 0 these  points will contribute to the pdi score
+               Overall score is the % of all fsts 
      7. Consumables used used
      8. Inventory i.e available materials
      9. Tools handover
