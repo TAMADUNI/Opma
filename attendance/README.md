@@ -12,6 +12,9 @@
      2. Start shift and End shift button to track time duration(time counter)
      3. Edit start time and End time i.e enter time manually like clockify
      4. Activities during shift i.e ink, solvent, opm, corrective maintanance, cleaning etc.
+          -  Each activity is wo number is logged to the app and it has a point
+             i.e 5, 4, 3, 2, 1, 0 these  points will contribute to the pdi score
+             Overall score is the % of all fsts 
      5. Issues and incidents
      6. Spare part used
      7. Consumables used used
