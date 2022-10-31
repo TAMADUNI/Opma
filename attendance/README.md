@@ -15,6 +15,17 @@
           -  Each activity is wo number is logged to the app and it has a point
              i.e 5, 4, 3, 2, 1, 0 these  points will contribute to the pdi score
              Overall score is the % of all fsts 
+          - when starting shift FT will login to the app, then visit each line recording ink and solvent level,
+          recording hrs remaining for Printer PRM, the next step prompted is printer cleaned ? if no clean the printer and took the picture, then remove dust paper towel, next ensure solvent bob is full and paper towel are available, is line OFF if yes do the following
+             - close the nozzle and shotdown the printer
+             - Its time to do OPM if you have
+             - Its time to refill solvent, ink if required this is an opportunity for you
+             - Its time to do corrective maintanance if required
+             - Its time to do cleaning if required
+             - Its time to do printer PRM
+
+          - Is backup printer OK if yes test print and took picture
+          - Is backup printer require service if yes it is the time to do service
      5. Issues and incidents
      6. Spare part used
            -  Each activity is wo number is logged to the app and it has a point
