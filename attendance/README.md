@@ -1,3 +1,9 @@
+# Oportunity maintenance tracking app (OMTA)
+
+Time is an opportunity don't waste it. If you have an opportunity do something
+Wake up early you will do a lot of things to because you have a plenty of time
+When you came early at job you will have the time to wash printer and to do many things.
+
 1. Attendance register with shift handover
      1. Signup and sign in
         - email and password authentication
