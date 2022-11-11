@@ -111,3 +111,8 @@ These are project that can make sicpa good place to work
     - Store the Neutralized bottle to the yellow cabinet and take the picture
     - Close the work order
 7. Service desk app
+
+
+### Technicall hints
+
+Mailer in production
