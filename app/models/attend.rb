@@ -1,2 +1,0 @@
-class Attend < ApplicationRecord
-end
