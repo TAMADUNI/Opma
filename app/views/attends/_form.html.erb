@@ -1,0 +1,17 @@
+<%= form_with(model: attend) do |form| %>
+  <% if attend.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(attend.errors.count, "error") %> prohibited this attend from being saved:</h2>
+
+      <ul>
+        <% attend.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
