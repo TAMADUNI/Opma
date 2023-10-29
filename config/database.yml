@@ -15,22 +15,19 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  username: postgres
-  password: Voda#0763
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: sicpamanagment_development
+  database: opma_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: sicpamanagment
+  #username: opma
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -58,7 +55,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: sicpamanagment_test
+  database: opma_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: sicpamanagment_production
-  username: sicpamanagment
-  password: <%= ENV["SICPAMANAGMENT_DATABASE_PASSWORD"] %>
+  database: opma_production
+  username: opma
+  password: <%= ENV["OPMA_DATABASE_PASSWORD"] %>
