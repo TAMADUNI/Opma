@@ -3,7 +3,7 @@
 
 <% if user_signed_in? %>
   Start the timer
-  <%= link_to 'Sign out', '#' %>
+  <%= button_to 'Sign out', '#' %>
 <% else %>
 <%= link_to 'Sign up' , new_user_registration_path %>
 <% end %>
