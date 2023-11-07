@@ -10,4 +10,9 @@ RSpec.describe User, type: :model do
     user = build(:user, email: nil)
     except(user).to_not be_valid
   end
+
+  it 'is not valid without a password' do
+    user = build(:user, password: nil)
+    except(user).to_not be_valid
+  end
 end
