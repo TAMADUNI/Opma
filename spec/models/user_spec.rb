@@ -17,14 +17,14 @@ RSpec.describe User, type: :model do
   end
 
   it 'is not valid with a duplicate email' do
-    existing_user = user.create(:user, email: "sample@example.com")
-    user = user.build(:user, email: "sample@example.com")
+    existing_user = user.create(:user, email: 'sample@example.com')
+    user = user.build(:user, email: 'sample@example.com')
     expect(user).to_not be_valid
   end
 
   it 'is valid with a unique email' do
-    existing_user = user.create(:user, email: "sample@example.com")
-    user = user.build(:user, email: "uniq@example.com")
+    existing_user = user.create(:user, email: 'sample@example.com')
+    user = user.build(:user, email: 'uniq@example.com')
     expect(user).to be_valid
   end
 end
