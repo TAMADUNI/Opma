@@ -52,6 +52,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
   gem 'rspec-rails', '~> 6.0.0'
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -67,5 +68,4 @@ end
 
 gem 'devise', '~> 4.9'
 gem 'capybara'
-gem 'factory_bot', '~> 6.3'
 
