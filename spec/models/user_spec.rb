@@ -2,30 +2,20 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   
-  it 'is valid with valid attributes ' do
-    user = build(:user)
-    expect(user).to be_valid
+  describe 'Validations' do
+    it { should validate_presence_of(:email) }
+    it { should validate_presence_of(:password) }
+    it { should validate_uniqueness_of(:email) }
+    it { should validate_length_of(:password).is_at_least(3) }
+    it { should validate_length_of(:password).is_at_most(20) }
+    it { should validate_length_of(:email).is_at_most(20) }
+    it { should validate_length_of(:email).is_at_least(8).on(:create) }
   end
-
-  it 'is not valid without an email' do
-    user = build(:user, email: nil)
-    expect(user).to_not be_valid
-  end
-
-  it 'is not valid without a password' do
-    user = build(:user, password: nil)
-    expect(user).to_not be_valid
-  end
-
-  it 'is not valid with a duplicate email' do
-    existing_user = create(:user, email: 'sample@example.com')
-    user = build(:user, email: 'sample@example.com')
-    expect(user).to_not be_valid
-  end
-
-  # it 'is valid with a unique email' do
-  #   existing_user = user.create(:user, email: 'sample@example.com')
-  #   user = user.build(:user, email: 'uniq@example.com')
-  #   expect(user).to be_valid
+  
+  # describe 'Factory' do
+  #   it 'should have valid Factory' do
+  #     expect(create(:user)).to be_valid
+  #   end
   # end
+ 
 end
