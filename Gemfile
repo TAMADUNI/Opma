@@ -68,3 +68,4 @@ end
 
 gem 'capybara'
 gem 'devise', '~> 4.9'
+gem 'wicked'
