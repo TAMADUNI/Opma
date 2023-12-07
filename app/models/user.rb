@@ -11,4 +11,12 @@ class User < ApplicationRecord
 
   belongs_to :department
   belongs_to :manager, class_name: 'User', optional: true
+
+  # validates_associated :department, if: -> { required_for_step? :set_department }
+
+  # cattr_accessor :form_steps do
+  #   %w(sign_up set_department set_manager)
+  # end 
+
+  # attr_accessor :form_step
 end

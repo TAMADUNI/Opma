@@ -20,12 +20,6 @@
  $font-size-xxxl: 2rem;    // 32px
  $font-size-xxxxl: 2.5rem; // 40px
 
- // Three different text colors
- $color-text-header: hsl(0, 1%, 16%);
- $color-text-body:   hsl(0, 5%, 25%);
- $color-text-muted:  hsl(0, 1%, 44%);
- $color-text-section: hsl(207, 45%, 47%);
- $color-input: #23242a;
 
    // Classical and robust spacing system
 $space-xxxs: 0.25rem; // 4px
@@ -49,6 +43,13 @@ $form-height: 70vh;
  $color-secondary-rotate: hsl(120, 45%, 56%);
  $color-tertiary:         hsl(49, 89%, 64%);
  $color-glint:            hsl(210, 100%, 82%);
+
+ // Three different text colors
+ $color-text-header: hsl(0, 1%, 16%);
+ $color-text-body:   hsl(0, 5%, 25%);
+ $color-text-muted:  hsl(0, 1%, 44%);
+ $color-text-section: hsl(207, 45%, 47%);
+ $color-input: #23242a;
 
  // Background colors
 
