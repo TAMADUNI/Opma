@@ -7,6 +7,9 @@
     background-color: $color-header-bg;
     overflow: hidden;
 
+    &--lg {
+        @include width_and_height($height:84vh);
+    }
     &--mid {
         @include width_and_height($height:74vh);
     }
