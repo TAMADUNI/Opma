@@ -11,10 +11,8 @@
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
     <div class="container">
+    <%= render 'layouts/flashes' %>
        <%= yield %>
     </div>
   </body>

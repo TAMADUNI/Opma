@@ -12,11 +12,15 @@ class User < ApplicationRecord
   belongs_to :department
   belongs_to :manager, class_name: 'User', optional: true
 
-  # validates_associated :department, if: -> { required_for_step? :set_department }
-
+  validates_associated :department, presence: true, if: :set_department
   # cattr_accessor :form_steps do
   #   %w(sign_up set_department set_manager)
   # end 
 
   # attr_accessor :form_step
+
+  def set_department
+    # Assuming you have a virtual attribute like current_step
+    current_step == :set_department
+  end
 end
