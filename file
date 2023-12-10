@@ -1,0 +1,8 @@
+class User < ApplicationRecord
+
+       belongs_to :department
+       belongs_to :manager, class_name: 'User', optional: true
+     
+       validates_associated :department, presence: true, if: :set_department
+end
+     
