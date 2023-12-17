@@ -26,7 +26,13 @@
         <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, class: "form__input" %>
         <span>Confirm password</span>
         <i></i>
-        </div>
+      </div>
+
+      <div class="form__group">
+      <%= f.collection_check_boxes :department_ids, Department.all, :id, :name, required: true, class: "form__input" %>
+      <span>Department</span>
+      <i></i>
+    </div>
     
         <%= f.submit "Sign up", class: "btn btn--mid" %>
       
