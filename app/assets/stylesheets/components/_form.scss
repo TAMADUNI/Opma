@@ -3,15 +3,15 @@
 
 .form {
     position: relative;
-    @include width_and_height(380px, 420px);
+    @include width_and_height(380px, 120px);
     background-color: $color-header-bg;
     overflow: hidden;
 
     &--lg {
-        @include width_and_height($height:84vh);
+        @include width_and_height(380px, 120px);
     }
     &--mid {
-        @include width_and_height($height:74vh);
+        @include width_and_height(380px, 420px);
     }
 
     &::before {
@@ -146,6 +146,43 @@
         }
 
       
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+
+        input {
+            width: 20px;
+            height: 20px;
+            background-color: $color-header-bg;
+            border: 1px solid $color-text-muted;
+            border-radius: 4px;
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+            transition: 0.5s;
+            margin-right: 10px;
+            z-index: 10;
+
+            &:checked {
+                background-color: $color-text-section;
+                border: 1px solid $color-text-section;
+            }
+
+            &:checked ~ label {
+                color: $color-text-section;
+            }
+        }
+
+        label {
+            color: $color-text-muted;
+            font-size: 1rem;
+            letter-spacing: 0.05rem;
+            z-index: 10;
+        }
     }
 }
 

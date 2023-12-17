@@ -28,7 +28,7 @@
         <i></i>
       </div>
 
-      <div class="form__group">
+      <div class="form__checkbox">
       <%= f.collection_check_boxes :department_ids, Department.all, :id, :name, required: true, class: "form__input" %>
       <span>Department</span>
       <i></i>

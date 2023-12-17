@@ -4,6 +4,10 @@
 #
 # Example:
 #
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+p "Seeding departments"
+  department_names= ["Operations", "IT", "Finance", "Service Center", "HR", "Supply Chain"]
+  department_names.each do |name|
+    Department.create!(name: name)
+  end
+
+p "Finished seeding departments"
