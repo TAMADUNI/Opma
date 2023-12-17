@@ -45,24 +45,24 @@ h3,
 h4,
 h5,
 h6 {
-  // color: $color-text-header);
-  // line-height: $line-height-headers);
+  color: $color-text-header;
+  line-height: $line-height-headers;
 }
 
 h1 {
-  // font-size: $font-size-xxxl);
+  font-size: $font-size-xxxl;
 }
 
 h2 {
-  // font-size: $font-size-xxl);
+  font-size: $font-size-xxl;
 }
 
 h3 {
-  // font-size: $font-size-xl);
+  font-size: $font-size-xl;
 }
 
 h4 {
-  // font-size: $font-size-l);
+  font-size: $font-size-l;
 }
 
 a {
@@ -78,8 +78,6 @@ a {
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  margin: 0 auto;
+  border: 11px solid red;
 }
