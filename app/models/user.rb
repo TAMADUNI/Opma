@@ -10,7 +10,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   belongs_to :department
-  belongs_to :manager, class_name: 'User', optional: true
+  has_one :managed_department, class_name: 'Department', foreign_key: 'manager_id'
 
  
  # cattr_accessor :form_steps do

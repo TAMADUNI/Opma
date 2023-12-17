@@ -67,4 +67,14 @@ class DepartmentsController < ApplicationController
     def department_params
       params.require(:department).permit(:name, :manager_id)
     end
+
+    def assign_manager
+      @user = User.find(params[:user_id])
+      @department = Department.find(params[:id])
+      # @department.update(manager_id: @user.id)
+      @department.manager = @user
+      @department.save!
+      redirect_to department_url(@department), notice: "Department manager was successfully updated."
+
+    end
 end
