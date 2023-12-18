@@ -29,7 +29,7 @@
       </div>
 
       <div class="form__checkbox">
-      <%= f.collection_check_boxes :department_ids, Department.all, :id, :name, required: true, class: "form__input" %>
+      <%= f.collection_select :department, Department.all, :id, :name %>
       <span>Department</span>
       <i></i>
     </div>

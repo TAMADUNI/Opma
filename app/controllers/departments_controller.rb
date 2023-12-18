@@ -57,6 +57,15 @@ class DepartmentsController < ApplicationController
     end
   end
 
+  def assign_manager
+    @user = User.find(params[:user_id])
+    @department = Department.find(params[:id])
+    # @department.update(manager_id: @user.id)
+    @department.manager = @user
+    @department.save!
+    redirect_to department_url(@department), notice: "Department manager was successfully updated."
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_department
@@ -68,13 +77,5 @@ class DepartmentsController < ApplicationController
       params.require(:department).permit(:name, :manager_id)
     end
 
-    def assign_manager
-      @user = User.find(params[:user_id])
-      @department = Department.find(params[:id])
-      # @department.update(manager_id: @user.id)
-      @department.manager = @user
-      @department.save!
-      redirect_to department_url(@department), notice: "Department manager was successfully updated."
-
-    end
+  
 end
