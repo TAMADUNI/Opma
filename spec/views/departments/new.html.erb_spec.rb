@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "departments/new", type: :view do
   before(:each) do
     assign(:department, Department.new(
-      name: "MyString",
+      name: "finance",
       manager: nil
     ))
   end

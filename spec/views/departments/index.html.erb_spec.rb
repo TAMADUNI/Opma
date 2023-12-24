@@ -4,11 +4,11 @@ RSpec.describe "departments/index", type: :view do
   before(:each) do
     assign(:departments, [
       Department.create!(
-        name: "Name",
+        name: "HR",
         manager: nil
       ),
       Department.create!(
-        name: "Name",
+        name: "Finance",
         manager: nil
       )
     ])
