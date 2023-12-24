@@ -17,8 +17,10 @@ describe 'User authentication' do
     visit confirmation_url
     expect(page).to have_content('Your email address has been successfully confirmed.')
   end
+
   scenario 'User can sign in with valid email and password' do
     user = create(:user, email: 'maja@gmail.com', password: '123')
+    user.confirm
     visit new_user_session_path
     fill_in 'user[email]', with: user.email
     fill_in 'user[password]', with: user.password
