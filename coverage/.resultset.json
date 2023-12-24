@@ -647,63 +647,6 @@
           null
         ]
       },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/helpers/after_signup_helper_spec.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/helpers/departments_helper_spec.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/helpers/home_helper_spec.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
       "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/mailers/user_mailer_spec.rb": {
         "lines": [
           1,
@@ -766,17 +709,6 @@
           2,
           2,
           2,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/requests/after_signup_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
           null,
           null
         ]
@@ -1067,116 +999,6 @@
           null
         ]
       },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/views/departments/edit.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/views/departments/index.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/views/departments/new.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/views/departments/show.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/mnt/c/Users/USER/Desktop/Projects/rails/opma/spec/views/home/index.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
       "/mnt/c/Users/USER/Desktop/Projects/rails/opma/app/controllers/users/registrations_controller.rb": {
         "lines": [
           null,
@@ -1288,6 +1110,6 @@
         ]
       }
     },
-    "timestamp": 1703447770
+    "timestamp": 1703447946
   }
 }
