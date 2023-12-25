@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sites
+  resources :regions
   resources :departments
   root "home#index"
   devise_for :users, controllers: {
