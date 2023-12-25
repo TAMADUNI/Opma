@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_18_141711) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_25_132526) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,29 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_18_141711) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manager_id"], name: "index_departments_on_manager_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name"
+    t.bigint "department_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["department_id"], name: "index_regions_on_department_id"
+  end
+
+  create_table "sites", force: :cascade do |t|
+    t.string "name"
+    t.bigint "region_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_sites_on_region_id"
+  end
+
+  create_table "user_sites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "site_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,4 +63,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_18_141711) do
   end
 
   add_foreign_key "departments", "users", column: "manager_id", on_delete: :nullify
+  add_foreign_key "regions", "departments"
+  add_foreign_key "sites", "regions"
 end
