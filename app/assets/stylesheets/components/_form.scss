@@ -3,12 +3,12 @@
 
 .form {
     position: relative;
-    @include width_and_height(380px, 120px);
+    @include width_and_height(380px, 100vh);
     background-color: $color-header-bg;
     overflow: hidden;
 
     &--lg {
-        @include width_and_height(380px, 120px);
+        @include width_and_height(380px, 70vh);
     }
     &--mid {
         @include width_and_height(380px, 420px);
@@ -40,8 +40,8 @@
     &__box {
         position: absolute;
         inset: 2px;
-        background-color: red;
-        border-radius: 8px;
+        // background-color: $color-text-section;
+        border-radius: 9px;
         z-index: 10;
         padding: 40px 50px;
         display: flex;
