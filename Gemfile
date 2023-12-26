@@ -75,3 +75,5 @@ end
 gem 'capybara'
 gem 'devise', '~> 4.9'
 gem 'wicked'
+
+gem "dartsass-rails", "~> 0.5.0"

@@ -27,10 +27,19 @@
         <span>Confirm password</span>
         <i></i>
       </div>
-
-      <div class="form__checkbox">
+    <div class="form__checkbox">
       <%= f.collection_select :department_id, Department.all, :id, :name %>
+      <span>Site</span>
+      <i></i>
+    </div>
+    <div class="form__checkbox">
+      <%= f.collection_select :region_id, Region.all, :id, :name %>
       <span>Department</span>
+      <i></i>
+    </div>
+    <div class="form__checkbox">
+      <%= f.collection_select :site_id, Site.all, :id, :name %>
+      <span>site</span>
       <i></i>
     </div>
     
