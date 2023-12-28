@@ -3,32 +3,32 @@
     <% items = ['Home', 'Dropdown Menu', 'Mega menu', 'Blog', 'About' ] %>
     <nav>
         <ul class="header__menu">
-                <li>
+                <li class="nav-link">
                   <%= link_to 'Home', root_path, class: "header__menu__item" %>
                 </li>
-                <li class="dropdown">
+                <li class="nav-link dropdown">
                     <%= link_to 'Dropdown Menu', '#', class: "header__menu__item" %>
                 </li>
-                <li class="mega">
+                <li class="nav-link mega">
                   <%= link_to 'Mega Menu', '#', class: "header__menu__item" %>
                 
                 </li>
-                <li class="mega">
+                <li class="nav-link mega">
                   <%= link_to 'Blog', '#', class: "header__menu__item" %>
                 </li>
-                <li>
+                <li class="nav-link">
                   <%= link_to 'About', '#', class: "header__menu__item" %>
                 </li>
                 <% if current_user %>
-                <li>
+                <li class="nav-link">
                   <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "header__menu__item" %>
                 <li>
                 <% else %>
                 <li>
-                  <%= link_to 'Login', user_session_path, class: "header__menu__item" %>
+                  <%= link_to 'Login', user_session_path, class: "btn" %>
                 </li>
                 <li>
-                  <%= link_to 'Register', new_user_registration_path, class: "header__menu__item" %>
+                  <%= link_to 'Register', new_user_registration_path, class: "btn" %>
                 </li>
                 <% end %>
         </ul>
