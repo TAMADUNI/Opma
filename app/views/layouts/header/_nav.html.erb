@@ -1,0 +1,36 @@
+<header class="header">
+    <%= link_to 'LOGO', root_path, class: "header__logo" %>
+    <% items = ['Home', 'Dropdown Menu', 'Mega menu', 'Blog', 'About' ] %>
+    <nav>
+        <ul class="header__menu">
+                <li>
+                  <%= link_to 'Home', root_path, class: "header__menu__item" %>
+                </li>
+                <li class="dropdown">
+                    <%= link_to 'Dropdown Menu', '#', class: "header__menu__item" %>
+                </li>
+                <li class="mega">
+                  <%= link_to 'Mega Menu', '#', class: "header__menu__item" %>
+                
+                </li>
+                <li class="mega">
+                  <%= link_to 'Blog', '#', class: "header__menu__item" %>
+                </li>
+                <li>
+                  <%= link_to 'About', '#', class: "header__menu__item" %>
+                </li>
+                <% if current_user %>
+                <li>
+                  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "header__menu__item" %>
+                <li>
+                <% else %>
+                <li>
+                  <%= link_to 'Login', user_session_path, class: "header__menu__item" %>
+                </li>
+                <li>
+                  <%= link_to 'Register', new_user_registration_path, class: "header__menu__item" %>
+                </li>
+                <% end %>
+        </ul>
+    </nav>
+</header>
