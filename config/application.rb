@@ -37,6 +37,6 @@ module Opma
     # config.eager_load_paths << Rails.root.join("extras")
     # Don't generate system test files.
     config.generators.system_tests = nil
-    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+    config.action_mailer.default_url_options = { host: 'localhost', port: 5000 }
   end
 end
