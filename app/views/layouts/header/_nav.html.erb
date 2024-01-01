@@ -20,8 +20,8 @@
                   <%= link_to 'About', '#', class: "header__menu__item" %>
                 </li>
                 <% if current_user %>
-                <li class="nav-link">
-                  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "header__menu__item" %>
+                <li>
+                  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn--mid" %>
                 <li>
                 <% else %>
                 <li>

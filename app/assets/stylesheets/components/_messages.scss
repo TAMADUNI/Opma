@@ -1,3 +1,5 @@
+@import "../abstracts/variables";
+
 .flash-message {
     padding: 1em;
     margin-bottom: 1em;
@@ -9,7 +11,7 @@
     background-color: #000;
     .flash{
         &.notice {
-            background-color: #00ff00;
+            background-color: $color-text-section;
         }
         &.alert {
             background-color: #ff0000;
