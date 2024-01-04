@@ -21,10 +21,10 @@
             <table>
                 <thead>
                     <tr>
-                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Department <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Location <span class="icon-arrow">&UpArrow;</span></th>
-                        <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Site <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Status <span class="icon-arrow">&UpArrow;</span></th>
                         <th> Amount <span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
@@ -34,6 +34,8 @@
                     <% @users.each do |user| %>
                             <td><%= user.email %></td>
                             <td><%= user.department.name %></td>
+                            <td><%= user.region.name %></td>
+                            <td><%= user.site.name %></td>
                     <% end %>
                     </tr>
                 </tbody>
