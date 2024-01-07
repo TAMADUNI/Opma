@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_26_093038) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_04_124015) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,19 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_26_093038) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manager_id"], name: "index_departments_on_manager_id"
+  end
+
+  create_table "handovers", force: :cascade do |t|
+    t.text "activities"
+    t.float "blob_rates"
+    t.float "ejection_rates"
+    t.text "pending_issues"
+    t.bigint "user_id", null: false
+    t.boolean "acceptance_status"
+    t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_handovers_on_user_id"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -65,6 +78,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_26_093038) do
   end
 
   add_foreign_key "departments", "users", column: "manager_id", on_delete: :nullify
+  add_foreign_key "handovers", "users"
   add_foreign_key "regions", "departments"
   add_foreign_key "sites", "regions"
 end

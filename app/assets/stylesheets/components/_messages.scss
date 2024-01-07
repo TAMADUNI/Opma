@@ -4,21 +4,21 @@
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 3px;
+    width: 90vw;
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
-    color: #fff;
-    background-color: #000;
     .flash{
         &.notice {
+            color: #fff;
             background-color: $color-text-section;
         }
         &.alert {
             background-color: #ff0000;
         }
-        &.success {
-            background-color: #d4edda;
-            color: black;
+        &.success {    
+            color: #fff;
+            background-color: #2ecc71;
         }
     }
    
