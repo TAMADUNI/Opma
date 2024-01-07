@@ -1,0 +1,35 @@
+<h1>All handovers</h1>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Handover</th>
+            <th>Handover date</th>
+            <th>Handover time</th>
+            <th>Handover location</th>
+            <th>Handover description</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @handovers.each do |handover| %>
+            <tr>
+                <td><%= handover.activities %></td>
+                <td><%= handover.blob_rates %></td>
+                <td><%= handover.ejection_rates %></td>
+                <td><%= handover.acceptance_status %></td>
+                <td><%= link_to 'Show', handover %></td>
+                <td><%= link_to 'Edit', edit_handover_path(handover) %></td>
+                <td><%= link_to 'Destroy', handover, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+    </tbody>
+
+</table>
+
+<br>
+
+<%= link_to 'New Handover', new_handover_path %>
+

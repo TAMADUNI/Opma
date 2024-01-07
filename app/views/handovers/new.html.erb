@@ -1,0 +1,11 @@
+<h1>Creat handover form</h1>
+<%= form_with(model: @handover) do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :acceptance_status, value: :pending %>
+    <%= f.text_area :activities, placeholder: 'Enter your activities here', required: true %>
+    <%= f.text_field :blob_rates, placeholder: 'Enter your blob rates here', required: true %>
+    <%= f.text_field :ejection_rates, placeholder: 'Enter your ejection rates here', required: true %>
+    <%= f.text_area :pending_issues, placeholder: 'Enter your pending issues here', required: true %>
+    <%= f.text_area :comments, placeholder: 'Enter your comments here', required: true %>
+    <%= f.submit 'Create Handover' %>
+<% end %>

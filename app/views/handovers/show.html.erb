@@ -1,0 +1,8 @@
+<h1>Handover Details</h1>
+<% if @handover.pending? %>
+  <%= form_with(url: reject_handover_handover_path(@handover), method: :post) do |f| %>
+    <%= f.text_area :comments, placeholder: 'Enter your comments here', required: true %>
+    <%= f.submit 'Reject Handover' %>
+  <% end %>
+  <%= link_to 'Accept Handover', accept_handover_handover_path(@handover), method: :post %>
+<% end %>
