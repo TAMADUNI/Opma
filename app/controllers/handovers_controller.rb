@@ -10,9 +10,15 @@ class HandoversController < ApplicationController
     def create
         @handover = Handover.new(handover_params)
         @handover.user_id = current_user.id
-        @handover.acceptance_status = :pending
-        @handover.save
-        redirect_to handovers_path
+        @handover.status = :pending
+        # @handover.site_id = current_user.site.id
+
+        if @handover.save
+         redirect_to handovers_path
+        else
+          puts @handover.errors.full_messages
+         render :new
+        end
     end
 
     def show 
