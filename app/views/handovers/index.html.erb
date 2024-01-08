@@ -4,11 +4,11 @@
 
     <thead>
         <tr>
-            <th>Handover</th>
-            <th>Handover date</th>
-            <th>Handover time</th>
-            <th>Handover location</th>
-            <th>Handover description</th>
+            <th>Activity</th>
+            <th>Blob rate</th>
+            <th>Ejection rate</th>
+            <th>Pending issues</th>
+            <th>status</th>
             <th colspan="3"></th>
         </tr>
     </thead>
@@ -19,7 +19,8 @@
                 <td><%= handover.activities %></td>
                 <td><%= handover.blob_rates %></td>
                 <td><%= handover.ejection_rates %></td>
-                <td><%= handover.acceptance_status %></td>
+                <td><%= handover.pending_issues %></td>
+                <td><%= handover.status %></td>
                 <td><%= link_to 'Show', handover %></td>
                 <td><%= link_to 'Edit', edit_handover_path(handover) %></td>
                 <td><%= link_to 'Destroy', handover, method: :delete, data: { confirm: 'Are you sure?' } %></td>

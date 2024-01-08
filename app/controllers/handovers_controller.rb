@@ -4,7 +4,7 @@ class HandoversController < ApplicationController
     end
 
     def index
-        @handovers = Handover.all
+      @handovers = current_user.site.handovers.pending
     end
 
     def create
@@ -12,30 +12,30 @@ class HandoversController < ApplicationController
         @handover.user_id = current_user.id
         @handover.acceptance_status = :pending
         @handover.save
-        redirect_to @handover
+        redirect_to handovers_path
     end
 
     def show 
       @handover = Handover.find(params[:id])
     end
 
-    def accept_handover
+    def accept
       @handover = Handover.find(params[:id])
-      @handover.update(acceptance_status: :accepted)
+      @handover.update(status: :accepted)
       redirect_to @handover
     end
 
-    def reject_handover
+    def reject
         @handover = Handover.find(params[:id])
-        @handover.update(acceptance_status: :rejected, comments: params[:comments])
+        @handover.update(status: :rejected, comments: params[:comments])
         redirect_to @handover
     end
 
     private 
     def handover_params
         params.require(:handover)
-        .permit(:user_id, :acceptance_status, :activities, :comments,
-        :blob_rates, :ejection_rates, :pending_issues
+        .permit(:user_id, :status, :activities, :comments,
+        :blob_rates, :ejection_rates, :pending_issues, :site_id
         )
     end
 

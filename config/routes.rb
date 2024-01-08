@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   }
 
 resources :handovers do
-  post 'accept_handover', on: :member
-  post 'reject_handover', on: :member
+  post 'accept', on: :member
+  post 'reject', on: :member
 end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
