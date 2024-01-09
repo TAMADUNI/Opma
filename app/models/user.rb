@@ -12,8 +12,8 @@ class User < ApplicationRecord
   belongs_to :department
   has_one :managed_department, class_name: 'Department', foreign_key: 'manager_id'
   belongs_to :region
-  belongs_to :site
   has_many :handovers
+  has_many :sites, through: :user_sites
  
  # cattr_accessor :form_steps do
   #   %w(sign_up set_department set_manager)
