@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_08_193041) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_10_080843) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,6 +37,21 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_193041) do
     t.index ["user_id"], name: "index_handovers_on_user_id"
   end
 
+  create_table "lines", force: :cascade do |t|
+    t.string "name"
+    t.bigint "site_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["site_id"], name: "index_lines_on_site_id"
+  end
+
+  create_table "lines_tasks", id: false, force: :cascade do |t|
+    t.bigint "task_id", null: false
+    t.bigint "line_id", null: false
+    t.index ["line_id", "task_id"], name: "index_lines_tasks_on_line_id_and_task_id"
+    t.index ["task_id", "line_id"], name: "index_lines_tasks_on_task_id_and_line_id"
+  end
+
   create_table "regions", force: :cascade do |t|
     t.string "name"
     t.bigint "department_id", null: false
@@ -51,6 +66,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_193041) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["region_id"], name: "index_sites_on_region_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "name"
+    t.integer "line_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_sites", force: :cascade do |t|
@@ -81,6 +103,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_193041) do
 
   add_foreign_key "departments", "users", column: "manager_id", on_delete: :nullify
   add_foreign_key "handovers", "users"
+  add_foreign_key "lines", "sites"
   add_foreign_key "regions", "departments"
   add_foreign_key "sites", "regions"
 end
