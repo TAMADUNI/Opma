@@ -35,3 +35,36 @@ p "Seeding regions"
   end
 
 p "Finished seeding regions"
+
+p "Seeding Tasks"
+running_tasks = [
+  { name: "Ink level", line_status: :running },
+  { name: "Clean printer", line_status: :running },
+]
+
+off_production_tasks = [
+  { name: "Ink level", line_status: :off_production },
+  { name: "Clean printer", line_status: :off_production },
+  { name: "cover cleaning", line_status: :off_production },
+  { name: "Total maintenance", line_status: :off_production },
+]
+
+running_tasks.each do |task|
+  task = Task.find_or_initialize_by(task)
+  if task.new_record?
+    task.save!
+    puts "Task '#{task.name}' created!"
+  else
+    puts "Task '#{task.name}' already exists!"
+  end
+end
+
+off_production_tasks.each do |task|
+  task = Task.find_or_initialize_by(task)
+  if task.new_record?
+    task.save!
+    puts "Task '#{task.name}' created!"
+  else
+    puts "Task '#{task.name}' already exists!"
+  end
+end

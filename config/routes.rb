@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'lines/index'
+  get 'dashboard/index'
   get 'users/index'
   get 'users/show'
   resources :sites
@@ -14,6 +16,11 @@ resources :handovers do
   post 'accept', on: :member
   post 'reject', on: :member
 end
+
+resources :tasks
+resources :lines
+resources :dashboard
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
