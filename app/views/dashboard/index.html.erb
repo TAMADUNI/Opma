@@ -1,0 +1,11 @@
+<!-- app/views/dashboard/index.html.erb -->
+<h1>Welcome, <%= @user.email %>!</h1>
+
+<h2>Your Assigned Site: <%= @assigned_site.name %></h2>
+
+<h3>Your Assigned Lines:</h3>
+<ul>
+  <% @assigned_lines.each do |line| %>
+    <li><%= line.name %> - Status: <%= line.status %></li>
+  <% end %>
+</ul>
