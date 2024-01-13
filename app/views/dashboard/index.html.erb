@@ -9,3 +9,24 @@
     <li><%= line.name %> - Status: <%= line.status %></li>
   <% end %>
 </ul>
+
+<h3>Routine Tasks:</h3>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.name %></li>
+  <% end %>
+</ul>
+
+<h3>Startable Tasks:</h3>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.name %> - <%= link_to 'Start', start_task_path(task), method: :put %></li>
+  <% end %>
+</ul>
+
+<h3>Active Tasks:</h3>
+<ul>
+  <% @user.active_tasks.each do |task| %>
+    <li><%= task.name %> - <%= link_to 'Complete', complete_task_path(task), method: :put %></li>
+  <% end %>
+</ul>

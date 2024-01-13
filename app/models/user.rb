@@ -14,6 +14,9 @@ class User < ApplicationRecord
   belongs_to :region
   has_many :handovers
   has_many :sites, through: :user_sites
+
+  has_many :active_tasks, -> { where(tasks: { completable: Task.completable[:can_complete] }) },
+           through: :work_sessions, source: :task
  
  # cattr_accessor :form_steps do
   #   %w(sign_up set_department set_manager)

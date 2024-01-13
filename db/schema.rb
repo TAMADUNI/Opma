@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_10_084637) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_12_181926) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blobrates", force: :cascade do |t|
+    t.bigint "line_id", null: false
+    t.float "percentage"
+    t.datetime "recorded_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["line_id"], name: "index_blobrates_on_line_id"
+  end
 
   create_table "departments", force: :cascade do |t|
     t.string "name"
@@ -103,9 +112,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_10_084637) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "work_sessions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "task_id", null: false
+    t.datetime "started_at"
+    t.datetime "completed_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_id"], name: "index_work_sessions_on_task_id"
+    t.index ["user_id"], name: "index_work_sessions_on_user_id"
+  end
+
+  add_foreign_key "blobrates", "lines"
   add_foreign_key "departments", "users", column: "manager_id", on_delete: :nullify
   add_foreign_key "handovers", "users"
   add_foreign_key "lines", "sites"
   add_foreign_key "regions", "departments"
   add_foreign_key "sites", "regions"
+  add_foreign_key "work_sessions", "tasks"
+  add_foreign_key "work_sessions", "users"
 end

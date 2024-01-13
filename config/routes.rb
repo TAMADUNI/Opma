@@ -17,10 +17,15 @@ resources :handovers do
   post 'reject', on: :member
 end
 
-resources :tasks
+resources :tasks, only: [] do
+  member do
+    put 'start'
+    put 'complete'
+  end
+end
+
 resources :lines
 resources :dashboard
-
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

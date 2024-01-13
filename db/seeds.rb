@@ -68,3 +68,15 @@ off_production_tasks.each do |task|
     puts "Task '#{task.name}' already exists!"
   end
 end
+
+# Seeding lines
+cck_lines = ["2901", "2902", "2903", "2904", "2905"]
+cck_lines.each do |line|
+  line = Line.find_or_initialize_by(name: line, site_id: Site.find_by(name: "CCK").id)
+  if line.new_record?
+    line.save!
+    puts "Line '#{line.name}' created!"
+  else
+    puts "Line '#{line.name}' already exists!"
+  end
+end 
