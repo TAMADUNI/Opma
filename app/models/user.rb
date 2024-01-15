@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_one :managed_department, class_name: 'Department', foreign_key: 'manager_id'
   belongs_to :region
   has_many :handovers
+  has_many :user_sites
   has_many :sites, through: :user_sites
 
   has_many :active_tasks, -> { where(tasks: { completable: Task.completable[:can_complete] }) },
