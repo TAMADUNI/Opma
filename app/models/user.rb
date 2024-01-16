@@ -14,7 +14,9 @@ class User < ApplicationRecord
   belongs_to :region
   has_many :handovers
   has_many :user_sites
-  has_many :sites, through: :user_sites
+  has_many :sites, through: :user_sites 
+  has_many :work_sessions
+  # has_many :active_tasks, through: :work_sessions, source: :task, -> { where(completable: :can_complete) }
 
   has_many :active_tasks, -> { where(tasks: { completable: Task.completable[:can_complete] }) },
            through: :work_sessions, source: :task
